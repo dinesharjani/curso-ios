@@ -76,9 +76,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="hamburguesasLabel" destination="WS6-DE-1Eb" id="oGe-RZ-4AS"/>
-                        <outlet property="heladosLabel" destination="M9G-sH-xRt" id="uo3-AO-g4J"/>
-                        <outlet property="papasFritasLabel" destination="qRp-3m-BP3" id="jxb-b6-it6"/>
+                        <outletCollection property="orderLabels" destination="WS6-DE-1Eb" collectionClass="NSMutableArray" id="IpX-eN-7P6"/>
+                        <outletCollection property="orderLabels" destination="qRp-3m-BP3" collectionClass="NSMutableArray" id="KdA-o6-hh4"/>
+                        <outletCollection property="orderLabels" destination="M9G-sH-xRt" collectionClass="NSMutableArray" id="Ypy-Vm-Z1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

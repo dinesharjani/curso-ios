@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var hamburguesasLabel: UILabel!
-    @IBOutlet weak var papasFritasLabel: UILabel!
-    @IBOutlet weak var heladosLabel: UILabel!
+    @IBOutlet var orderLabels: [UILabel]!
     
     var hamburguesas: Int = 0
     var papasFritas: Int = 0
@@ -20,26 +18,26 @@ class ViewController: UIViewController {
     
     @IBAction func buttonWasTapped(_ sender: UIButton) {
         hamburguesas += 1
-        hamburguesasLabel.text = "Hamburguesas: \(hamburguesas)"
+        orderLabels[0].text = "Hamburguesas: \(hamburguesas)"
     }
     
     @IBAction func papasFritasWasTapped(_ sender: UIButton) {
         papasFritas += 1
-        papasFritasLabel.text = "Papas Fritas: \(papasFritas)"
+        orderLabels[1].text = "Papas Fritas: \(papasFritas)"
     }
     
     @IBAction func heladosWasTapped(_ sender: UIButton) {
         helados += 1
-        heladosLabel.text = "Helados: \(helados)"
+        orderLabels[2].text = "Helados: \(helados)"
     }
     
     @IBAction func newOrderWasTapped(_ sender: UIButton) {
         hamburguesas = 0
-        hamburguesasLabel.text = "Hamburguesas: \(hamburguesas)"
+        orderLabels[0].text = "Hamburguesas: \(hamburguesas)"
         papasFritas = 0
-        papasFritasLabel.text = "Papas Fritas: \(papasFritas)"
+        orderLabels[1].text = "Papas Fritas: \(papasFritas)"
         helados = 0
-        heladosLabel.text = "Helados: \(helados)"
+        orderLabels[2].text = "Helados: \(helados)"
     }
     
     override func viewDidLoad() {
