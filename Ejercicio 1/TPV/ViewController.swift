@@ -23,13 +23,22 @@ class ViewController: UIViewController {
         hamburguesasLabel.text = "Hamburguesas: \(hamburguesas)"
     }
     
-    @IBAction func papasFritasWasTapped(_ sender: Any) {
+    @IBAction func papasFritasWasTapped(_ sender: UIButton) {
         papasFritas += 1
         papasFritasLabel.text = "Papas Fritas: \(papasFritas)"
     }
     
-    @IBAction func heladosWasTapped(_ sender: Any) {
+    @IBAction func heladosWasTapped(_ sender: UIButton) {
         helados += 1
+        heladosLabel.text = "Helados: \(helados)"
+    }
+    
+    @IBAction func newOrderWasTapped(_ sender: UIButton) {
+        hamburguesas = 0
+        hamburguesasLabel.text = "Hamburguesas: \(hamburguesas)"
+        papasFritas = 0
+        papasFritasLabel.text = "Papas Fritas: \(papasFritas)"
+        helados = 0
         heladosLabel.text = "Helados: \(helados)"
     }
     
