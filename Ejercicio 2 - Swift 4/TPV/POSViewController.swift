@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  POSViewController.swift
 //  TPV
 //
 //  Created by Dinesh Harjani on 03/03/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class POSViewController: UIViewController {
     
     @IBOutlet var orderLabels: [UILabel]!
     
