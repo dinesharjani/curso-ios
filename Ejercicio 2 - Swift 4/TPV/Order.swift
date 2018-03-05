@@ -8,12 +8,28 @@
 
 import Foundation
 
-class Order {
+class Order: Consumable {
     
-    private class Item {
+    private class Item: Consumable {
         
         let units: Int
         let type: String
+        
+        var price: Price {
+            let itemPrice: Price
+            switch type {
+            case "hamburger":
+                itemPrice = Price(units: 3, cents: 99, multiplier: units)
+            case "fries":
+                itemPrice = Price(units: 2, cents: 49, multiplier: units)
+            case "ice-cream":
+                itemPrice = Price(units: 1, cents: 89, multiplier: units)
+            default:
+                itemPrice = Price()
+            }
+            
+            return itemPrice
+        }
         
         init(WithUnits units: Int, andType type: String) {
             self.units = units
@@ -22,6 +38,14 @@ class Order {
     }
     
     private var items = Array<Order.Item>()
+    
+    var price: Price {
+        var accumuledPrice = Price()
+        for item in items {
+            accumuledPrice = accumuledPrice + item.price
+        }
+        return accumuledPrice
+    }
     
     func addHamburger(_ units: Int = 1) {
         items.append(Order.Item(WithUnits: units, andType: "hamburger"))

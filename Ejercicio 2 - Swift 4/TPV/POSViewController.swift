@@ -67,6 +67,7 @@ class POSViewController: UIViewController {
         newOrder.addFries(papasFritas)
         newOrder.addIcreCream(helados)
         orders.append(newOrder)
+        print("\(newOrder.price)")
         
         numberOfItemsInOrder = 0
     }

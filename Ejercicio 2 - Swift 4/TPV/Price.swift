@@ -21,4 +21,15 @@ struct Price: CustomStringConvertible {
     var description: String {
         return "\(units).\(cents)€"
     }
+    
+    init(units: Int = 0, cents: Int = 0, multiplier: Int = 1) {
+        self.units = (units * multiplier) + (cents * multiplier / 100)
+        self.cents = (cents * multiplier % 100)
+    }
+    
+    static func + (left: Price, right: Price) -> Price {
+        let unitsOverflow = (left.cents + right.cents) / 100
+        let totalCents = (left.cents + right.cents) % 100
+        return Price(units: left.units + right.units + unitsOverflow, cents: totalCents)
+    }
 }
