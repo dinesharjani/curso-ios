@@ -12,20 +12,32 @@ class POSViewController: UIViewController {
     
     @IBOutlet var orderLabels: [UILabel]!
     
-    var hamburguesas: Int = 0 {
+    var hamburguesas = 0 {
         didSet {
             orderLabels[0].text = "Hamburguesas: \(hamburguesas)"
         }
     }
     
-    var papasFritas: Int = 0 {
+    var papasFritas = 0 {
         didSet {
             orderLabels[1].text = "Papas Fritas: \(papasFritas)"
         }
     }
-    var helados: Int = 0 {
+    
+    var helados = 0 {
         didSet {
             orderLabels[2].text = "Helados: \(helados)"
+        }
+    }
+    
+    var numberOfItemsInOrder: Int {
+        get {
+            return hamburguesas + papasFritas + helados
+        }
+        set {
+            hamburguesas = 0
+            papasFritas = 0
+            helados = 0
         }
     }
     
@@ -42,9 +54,7 @@ class POSViewController: UIViewController {
     }
     
     @IBAction func newOrderWasTapped(_ sender: UIButton) {
-        hamburguesas = 0
-        papasFritas = 0
-        helados = 0
+        numberOfItemsInOrder = 0
     }
     
     override func viewDidLoad() {
