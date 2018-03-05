@@ -20,4 +20,18 @@ class Order {
             self.type = type
         }
     }
+    
+    private var items = Array<Order.Item>()
+    
+    func addHamburger(_ units: Int = 1) {
+        items.append(Order.Item(WithUnits: units, andType: "hamburger"))
+    }
+    
+    func addFries(_ units: Int = 1) {
+        items.append(Order.Item(WithUnits: units, andType: "fries"))
+    }
+    
+    func addIcreCream(_ units: Int = 1) {
+        items.append(Order.Item(WithUnits: units, andType: "ice-cream"))
+    }
 }
