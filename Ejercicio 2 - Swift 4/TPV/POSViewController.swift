@@ -10,27 +10,33 @@ import UIKit
 
 class POSViewController: UIViewController {
     
+    private struct Constants {
+        static let burgersLabelIndex = 0
+        static let friesLabelIndex = 1
+        static let iceCreamLabelIndex = 2
+    }
+    
     @IBOutlet var orderLabels: [UILabel]!
     
-    var hamburguesas = 0 {
+    private (set) var hamburguesas = 0 {
         didSet {
-            orderLabels[0].text = "Hamburguesas: \(hamburguesas)"
+            orderLabels[Constants.burgersLabelIndex].text = "Hamburguesas: \(hamburguesas)"
         }
     }
     
-    var papasFritas = 0 {
+    private (set) var papasFritas = 0 {
         didSet {
-            orderLabels[1].text = "Papas Fritas: \(papasFritas)"
+            orderLabels[Constants.friesLabelIndex].text = "Papas Fritas: \(papasFritas)"
         }
     }
     
-    var helados = 0 {
+    private (set) var helados = 0 {
         didSet {
-            orderLabels[2].text = "Helados: \(helados)"
+            orderLabels[Constants.iceCreamLabelIndex].text = "Helados: \(helados)"
         }
     }
     
-    var numberOfItemsInOrder: Int {
+    private var numberOfItemsInOrder: Int {
         get {
             return hamburguesas + papasFritas + helados
         }
@@ -41,19 +47,19 @@ class POSViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonWasTapped(_ sender: UIButton) {
+    @IBAction private func buttonWasTapped(_ sender: UIButton) {
         hamburguesas += 1
     }
     
-    @IBAction func papasFritasWasTapped(_ sender: UIButton) {
+    @IBAction private func papasFritasWasTapped(_ sender: UIButton) {
         papasFritas += 1
     }
     
-    @IBAction func heladosWasTapped(_ sender: UIButton) {
+    @IBAction private func heladosWasTapped(_ sender: UIButton) {
         helados += 1
     }
     
-    @IBAction func newOrderWasTapped(_ sender: UIButton) {
+    @IBAction private func newOrderWasTapped(_ sender: UIButton) {
         numberOfItemsInOrder = 0
     }
     
