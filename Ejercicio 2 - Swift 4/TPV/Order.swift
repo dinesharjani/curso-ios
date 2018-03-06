@@ -52,15 +52,13 @@ class Order: Consumable {
         return accumuledPrice
     }
     
-    func addHamburger(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: .Hamburger))
-    }
-    
-    func addFries(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: .Fries))
-    }
-    
-    func addIcreCream(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: .IceCream))
+    init?(hamburgers: Int, fries: Int, iceCream: Int) {
+        guard hamburgers + fries + iceCream > 0 else {
+            return nil
+        }
+        
+        self.items.append(Order.Item(WithUnits: hamburgers, andType: .Hamburger))
+        self.items.append(Order.Item(WithUnits: fries, andType: .Fries))
+        self.items.append(Order.Item(WithUnits: iceCream, andType: .IceCream))
     }
 }

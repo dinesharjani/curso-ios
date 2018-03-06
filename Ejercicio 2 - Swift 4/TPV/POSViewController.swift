@@ -62,12 +62,10 @@ class POSViewController: UIViewController {
     }
     
     @IBAction private func newOrderWasTapped(_ sender: UIButton) {
-        let newOrder = Order()
-        newOrder.addHamburger(hamburguesas)
-        newOrder.addFries(papasFritas)
-        newOrder.addIcreCream(helados)
-        orders.append(newOrder)
-        print("\(newOrder.price)")
+        if let newOrder = Order(hamburgers: hamburguesas, fries: papasFritas, iceCream: helados) {
+            orders.append(newOrder)
+            print("\(newOrder.price)")
+        }
         
         numberOfItemsInOrder = 0
     }
