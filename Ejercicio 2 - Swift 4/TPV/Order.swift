@@ -12,26 +12,30 @@ class Order: Consumable {
     
     private class Item: Consumable {
         
+        fileprivate enum Food {
+            case Hamburger
+            case Fries
+            case IceCream
+        }
+        
         let units: Int
-        let type: String
+        let type: Food
         
         var price: Price {
             let itemPrice: Price
             switch type {
-            case "hamburger":
+            case .Hamburger:
                 itemPrice = Price(units: 3, cents: 99, multiplier: units)
-            case "fries":
+            case .Fries:
                 itemPrice = Price(units: 2, cents: 49, multiplier: units)
-            case "ice-cream":
+            case .IceCream:
                 itemPrice = Price(units: 1, cents: 89, multiplier: units)
-            default:
-                itemPrice = Price()
             }
             
             return itemPrice
         }
         
-        init(WithUnits units: Int, andType type: String) {
+        init(WithUnits units: Int, andType type: Food) {
             self.units = units
             self.type = type
         }
@@ -48,14 +52,14 @@ class Order: Consumable {
     }
     
     func addHamburger(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: "hamburger"))
+        items.append(Order.Item(WithUnits: units, andType: .Hamburger))
     }
     
     func addFries(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: "fries"))
+        items.append(Order.Item(WithUnits: units, andType: .Fries))
     }
     
     func addIcreCream(_ units: Int = 1) {
-        items.append(Order.Item(WithUnits: units, andType: "ice-cream"))
+        items.append(Order.Item(WithUnits: units, andType: .IceCream))
     }
 }
