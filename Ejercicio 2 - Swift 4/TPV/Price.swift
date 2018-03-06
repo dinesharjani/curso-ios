@@ -27,6 +27,10 @@ struct Price: CustomStringConvertible {
         self.cents = (cents * multiplier % 100)
     }
     
+    init(_ price: Price, multiplier: Int = 1) {
+        self.init(units: price.units, cents: price.cents, multiplier: multiplier)
+    }
+    
     static func + (left: Price, right: Price) -> Price {
         let unitsOverflow = (left.cents + right.cents) / 100
         let totalCents = (left.cents + right.cents) % 100

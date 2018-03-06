@@ -12,27 +12,28 @@ class Order: Consumable {
     
     private class Item: Consumable {
         
-        fileprivate enum Food {
+        fileprivate enum Food: Consumable {
             case Hamburger
             case Fries
             case IceCream
+            
+            var price: Price {
+                switch self {
+                case .Hamburger:
+                    return Price(units: 3, cents: 99)
+                case .Fries:
+                    return Price(units: 2, cents: 49)
+                case .IceCream:
+                    return Price(units: 1, cents: 89)
+                }
+            }
         }
         
         let units: Int
         let type: Food
         
         var price: Price {
-            let itemPrice: Price
-            switch type {
-            case .Hamburger:
-                itemPrice = Price(units: 3, cents: 99, multiplier: units)
-            case .Fries:
-                itemPrice = Price(units: 2, cents: 49, multiplier: units)
-            case .IceCream:
-                itemPrice = Price(units: 1, cents: 89, multiplier: units)
-            }
-            
-            return itemPrice
+            return Price(type.price, multiplier: units)
         }
         
         init(WithUnits units: Int, andType type: Food) {
