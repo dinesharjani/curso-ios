@@ -42,7 +42,7 @@ class Order: Consumable {
     var price: Price {
         var accumuledPrice = Price()
         for item in items {
-            accumuledPrice = accumuledPrice + item.price
+            accumuledPrice += item.price
         }
         return accumuledPrice
     }

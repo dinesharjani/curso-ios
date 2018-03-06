@@ -32,4 +32,8 @@ struct Price: CustomStringConvertible {
         let totalCents = (left.cents + right.cents) % 100
         return Price(units: left.units + right.units + unitsOverflow, cents: totalCents)
     }
+    
+    static func += (left: inout Price, right: Price) {
+        left = left + right
+    }
 }
