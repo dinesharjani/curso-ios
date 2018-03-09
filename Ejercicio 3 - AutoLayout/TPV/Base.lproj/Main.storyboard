@@ -27,7 +27,6 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-dg-fbz">
                                 <rect key="frame" x="16" y="60" width="343" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cJy-ao-kkl"/>
                                 </constraints>
@@ -89,6 +88,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="headerImageView" destination="CSp-dg-fbz" id="SKK-Ho-shY"/>
                         <outletCollection property="orderLabels" destination="WS6-DE-1Eb" collectionClass="NSMutableArray" id="IpX-eN-7P6"/>
                         <outletCollection property="orderLabels" destination="qRp-3m-BP3" collectionClass="NSMutableArray" id="KdA-o6-hh4"/>
                         <outletCollection property="orderLabels" destination="M9G-sH-xRt" collectionClass="NSMutableArray" id="Ypy-Vm-Z1N"/>

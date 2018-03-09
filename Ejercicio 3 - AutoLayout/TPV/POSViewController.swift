@@ -16,6 +16,12 @@ class POSViewController: UIViewController {
         static let iceCreamLabelIndex = 2
     }
     
+    @IBOutlet weak var headerImageView: UIImageView! {
+        didSet {
+            headerImageView.backgroundColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+        }
+    }
+    
     @IBOutlet var orderLabels: [UILabel]!
     
     private (set) var hamburguesas = 0 {
