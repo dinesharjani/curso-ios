@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Baseline standard spacing" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,53 +20,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uny-uo-mVF">
-                                <rect key="frame" x="164" y="73" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uny-uo-mVF">
+                                <rect key="frame" x="169" y="68.666666666666671" width="36" height="30"/>
                                 <state key="normal" title="Pedir"/>
                                 <connections>
                                     <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHp-2A-T20"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hamburguesas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-DE-1Eb">
-                                <rect key="frame" x="99" y="44" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburguesas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-DE-1Eb">
+                                <rect key="frame" x="120.00000000000001" y="52" width="135.33333333333337" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-ri-Hgq">
-                                <rect key="frame" x="164" y="140" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-ri-Hgq">
+                                <rect key="frame" x="169" y="123.33333333333331" width="36" height="30"/>
                                 <state key="normal" title="Pedir"/>
                                 <connections>
                                     <action selector="papasFritasWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZE-r1-KHA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Papas Fritas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-3m-BP3">
-                                <rect key="frame" x="99" y="111" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papas Fritas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-3m-BP3">
+                                <rect key="frame" x="131" y="106.66666666666667" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Qy-nen">
-                                <rect key="frame" x="164" y="207" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Qy-nen">
+                                <rect key="frame" x="169" y="178" width="36" height="30"/>
                                 <state key="normal" title="Pedir"/>
                                 <connections>
                                     <action selector="heladosWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLd-bt-wUg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Helados: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-sH-xRt">
-                                <rect key="frame" x="99" y="178" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helados: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-sH-xRt">
+                                <rect key="frame" x="146.33333333333334" y="161.33333333333334" width="82.333333333333343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huW-Tq-Pn6">
-                                <rect key="frame" x="139.66666666666666" y="748" width="96" height="30"/>
+                                <rect key="frame" x="140" y="748" width="96" height="30"/>
                                 <state key="normal" title="Nuevo Pedido"/>
                                 <connections>
                                     <action selector="newOrderWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hj5-Yk-yF6"/>
@@ -73,8 +69,20 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bg5-Qy-nen" firstAttribute="firstBaseline" secondItem="M9G-sH-xRt" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Hc0-Ax-fxo"/>
+                            <constraint firstItem="huW-Tq-Pn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MPi-16-BRw"/>
+                            <constraint firstItem="M9G-sH-xRt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NoD-6z-TUZ"/>
+                            <constraint firstItem="vmd-ri-Hgq" firstAttribute="firstBaseline" secondItem="qRp-3m-BP3" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="P9N-Mq-rxF"/>
+                            <constraint firstItem="vmd-ri-Hgq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PQk-3p-yaS"/>
+                            <constraint firstItem="bg5-Qy-nen" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UNm-fh-C56"/>
+                            <constraint firstItem="Uny-uo-mVF" firstAttribute="firstBaseline" secondItem="WS6-DE-1Eb" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Vwb-jd-c8S"/>
+                            <constraint firstItem="WS6-DE-1Eb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZtK-kG-t8O"/>
+                            <constraint firstItem="WS6-DE-1Eb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="a0N-LF-5Pt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="huW-Tq-Pn6" secondAttribute="bottom" id="eUy-fA-oBM"/>
-                            <constraint firstItem="huW-Tq-Pn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="w9C-ba-eoc"/>
+                            <constraint firstItem="qRp-3m-BP3" firstAttribute="top" secondItem="Uny-uo-mVF" secondAttribute="bottom" constant="8" symbolic="YES" id="fFr-Nf-MHz"/>
+                            <constraint firstItem="qRp-3m-BP3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="omD-OE-7qj"/>
+                            <constraint firstItem="M9G-sH-xRt" firstAttribute="top" secondItem="vmd-ri-Hgq" secondAttribute="bottom" constant="8" symbolic="YES" id="qep-3F-W6D"/>
+                            <constraint firstItem="Uny-uo-mVF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qyf-A3-vru"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
