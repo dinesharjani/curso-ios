@@ -77,9 +77,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niK-4H-vyz">
+                                <rect key="frame" x="133" y="710" width="108" height="30"/>
+                                <state key="normal" title="Resumir Pedido"/>
+                                <connections>
+                                    <segue destination="OF0-8i-88g" kind="presentation" id="hu4-Cg-lbY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="huW-Tq-Pn6" firstAttribute="top" secondItem="niK-4H-vyz" secondAttribute="bottom" constant="8" id="31I-8q-9C3"/>
+                            <constraint firstItem="niK-4H-vyz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HIv-xQ-EYA"/>
                             <constraint firstItem="huW-Tq-Pn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MPi-16-BRw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSp-dg-fbz" secondAttribute="trailing" constant="16" id="WaR-Vy-VP6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="huW-Tq-Pn6" secondAttribute="bottom" id="eUy-fA-oBM"/>
