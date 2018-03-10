@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wij-wR-haZ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,14 +27,14 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-dg-fbz">
-                                <rect key="frame" x="16" y="60" width="343" height="50"/>
+                                <rect key="frame" x="16" y="104" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cJy-ao-kkl"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-bI-lPN">
-                                <rect key="frame" x="120.00000000000001" y="118" width="135.33333333333337" height="191"/>
+                                <rect key="frame" x="120.00000000000001" y="162" width="135.33333333333337" height="191"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburguesas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-DE-1Eb">
                                         <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="20.333333333333332"/>
@@ -56,14 +56,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-ri-Hgq">
-                                        <rect key="frame" x="49.666666666666657" y="94.666666666666657" width="36" height="30"/>
+                                        <rect key="frame" x="49.666666666666657" y="94.666666666666686" width="36" height="30"/>
                                         <state key="normal" title="Pedir"/>
                                         <connections>
                                             <action selector="papasFritasWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZE-r1-KHA"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helados: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-sH-xRt">
-                                        <rect key="frame" x="26.66666666666665" y="132.66666666666666" width="82.333333333333314" height="20.333333333333343"/>
+                                        <rect key="frame" x="26.66666666666665" y="132.66666666666669" width="82.333333333333314" height="20.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                                 <rect key="frame" x="133" y="710" width="108" height="30"/>
                                 <state key="normal" title="Resumir Pedido"/>
                                 <connections>
-                                    <segue destination="OF0-8i-88g" kind="presentation" identifier="showSummary" id="hu4-Cg-lbY"/>
+                                    <segue destination="OF0-8i-88g" kind="show" identifier="showSummary" id="hu4-Cg-lbY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,6 +99,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="SDX-4d-f8d"/>
                     <connections>
                         <outlet property="headerImageView" destination="CSp-dg-fbz" id="SKK-Ho-shY"/>
                         <outletCollection property="orderLabels" destination="WS6-DE-1Eb" collectionClass="NSMutableArray" id="IpX-eN-7P6"/>
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.773399014778327"/>
+            <point key="canvasLocation" x="367.19999999999999" y="31.773399014778327"/>
         </scene>
         <!--Order Summary View Controller-->
         <scene sceneID="4uA-DG-IOZ">
@@ -138,7 +139,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUS-3d-pSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="866" y="32"/>
+            <point key="canvasLocation" x="1207.2" y="31.773399014778327"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8rI-nJ-ZCR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wij-wR-haZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="shw-G1-n0c">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KQT-1N-F7o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="htx-vS-sim" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="32"/>
         </scene>
     </scenes>
 </document>

@@ -26,10 +26,11 @@ class OrderSummaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Resumen"
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onViewControllerTapped(_:))))
     }
     
     @objc func onViewControllerTapped(_ sender: Any?) {
-        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }
