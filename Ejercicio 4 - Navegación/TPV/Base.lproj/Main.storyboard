@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="POSViewController" customModule="TPV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huW-Tq-Pn6">
+                                <rect key="frame" x="140" y="748" width="96" height="30"/>
+                                <state key="normal" title="Nuevo Pedido"/>
+                                <connections>
+                                    <action selector="newOrderWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hj5-Yk-yF6"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-dg-fbz">
+                                <rect key="frame" x="16" y="60" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cJy-ao-kkl"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-bI-lPN">
+                                <rect key="frame" x="120.00000000000001" y="118" width="135.33333333333337" height="191"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hamburguesas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WS6-DE-1Eb">
+                                        <rect key="frame" x="0.0" y="0.0" width="135.33333333333334" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uny-uo-mVF">
+                                        <rect key="frame" x="49.666666666666657" y="28.333333333333343" width="36" height="30"/>
+                                        <state key="normal" title="Pedir"/>
+                                        <connections>
+                                            <action selector="buttonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KHp-2A-T20"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papas Fritas: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-3m-BP3">
+                                        <rect key="frame" x="11.333333333333343" y="66.333333333333343" width="113" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmd-ri-Hgq">
+                                        <rect key="frame" x="49.666666666666657" y="94.666666666666657" width="36" height="30"/>
+                                        <state key="normal" title="Pedir"/>
+                                        <connections>
+                                            <action selector="papasFritasWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZE-r1-KHA"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Helados: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-sH-xRt">
+                                        <rect key="frame" x="26.66666666666665" y="132.66666666666666" width="82.333333333333314" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg5-Qy-nen">
+                                        <rect key="frame" x="49.666666666666657" y="161" width="36" height="30"/>
+                                        <state key="normal" title="Pedir"/>
+                                        <connections>
+                                            <action selector="heladosWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLd-bt-wUg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="huW-Tq-Pn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MPi-16-BRw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSp-dg-fbz" secondAttribute="trailing" constant="16" id="WaR-Vy-VP6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="huW-Tq-Pn6" secondAttribute="bottom" id="eUy-fA-oBM"/>
+                            <constraint firstItem="CSp-dg-fbz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hf5-sH-0vA"/>
+                            <constraint firstItem="gjV-bI-lPN" firstAttribute="top" secondItem="CSp-dg-fbz" secondAttribute="bottom" constant="8" symbolic="YES" id="oyu-tX-0SH"/>
+                            <constraint firstItem="CSp-dg-fbz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yG4-3I-wIo"/>
+                            <constraint firstItem="gjV-bI-lPN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yOJ-1N-Dem"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="headerImageView" destination="CSp-dg-fbz" id="SKK-Ho-shY"/>
+                        <outletCollection property="orderLabels" destination="WS6-DE-1Eb" collectionClass="NSMutableArray" id="IpX-eN-7P6"/>
+                        <outletCollection property="orderLabels" destination="qRp-3m-BP3" collectionClass="NSMutableArray" id="KdA-o6-hh4"/>
+                        <outletCollection property="orderLabels" destination="M9G-sH-xRt" collectionClass="NSMutableArray" id="Ypy-Vm-Z1N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.773399014778327"/>
+        </scene>
+    </scenes>
+</document>
