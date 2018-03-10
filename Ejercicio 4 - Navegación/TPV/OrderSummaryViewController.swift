@@ -12,10 +12,16 @@ class OrderSummaryViewController: UIViewController {
 
     @IBOutlet weak var summaryLabel: UILabel! {
         didSet {
-            summaryLabel.text = "Total: 0.0€"
+            guard order != nil else {
+                summaryLabel.text = "Total: 0.0€"
+                return
+            }
+
+            summaryLabel.text = "Total: \(order!.price)"
         }
     }
     
+    public var order: Order?
     
     override func viewDidLoad() {
         super.viewDidLoad()

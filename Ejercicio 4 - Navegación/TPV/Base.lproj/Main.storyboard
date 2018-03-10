@@ -81,7 +81,7 @@
                                 <rect key="frame" x="133" y="710" width="108" height="30"/>
                                 <state key="normal" title="Resumir Pedido"/>
                                 <connections>
-                                    <segue destination="OF0-8i-88g" kind="presentation" id="hu4-Cg-lbY"/>
+                                    <segue destination="OF0-8i-88g" kind="presentation" identifier="showSummary" id="hu4-Cg-lbY"/>
                                 </connections>
                             </button>
                         </subviews>

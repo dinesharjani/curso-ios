@@ -82,5 +82,13 @@ class POSViewController: UIViewController {
         
         view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == "showSummary", let summaryViewController = segue.destination as? OrderSummaryViewController {
+            summaryViewController.order = Order(hamburgers: hamburguesas, fries: papasFritas, iceCream: helados)
+        }
+    }
 }
 
