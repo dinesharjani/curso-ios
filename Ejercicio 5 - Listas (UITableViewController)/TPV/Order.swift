@@ -44,6 +44,10 @@ class Order: Consumable {
     
     private var items = Array<Order.Item>()
     
+    public var numberOfItems: Int {
+        return items.count
+    }
+    
     var price: Price {
         var accumuledPrice = Price()
         for item in items {
