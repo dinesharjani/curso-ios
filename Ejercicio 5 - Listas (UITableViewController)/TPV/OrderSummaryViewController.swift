@@ -58,7 +58,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: Constants.cellIdentifier)
         }
         
-        cell?.textLabel?.text = "Hello"
+        cell?.textLabel?.text = order!.item(atIndex: indexPath.row)
         
         return cell!
     }

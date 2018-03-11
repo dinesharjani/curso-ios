@@ -12,19 +12,25 @@ class Order: Consumable {
     
     private class Item: Consumable {
         
-        fileprivate enum Food: Consumable {
+        fileprivate enum Food: Consumable, CustomStringConvertible {
+            
             case Hamburger
             case Fries
             case IceCream
             
             var price: Price {
                 switch self {
-                case .Hamburger:
-                    return Price(units: 3, cents: 99)
-                case .Fries:
-                    return Price(units: 2, cents: 49)
-                case .IceCream:
-                    return Price(units: 1, cents: 89)
+                case .Hamburger: return Price(units: 3, cents: 99)
+                case .Fries: return Price(units: 2, cents: 49)
+                case .IceCream: return Price(units: 1, cents: 89)
+                }
+            }
+            
+            var description: String {
+                switch self {
+                case .Hamburger: return "🍔 Hamburguesas"
+                case .Fries: return "🍟 Papas Fritas"
+                case .IceCream: return "🍦 Helados"
                 }
             }
         }
@@ -44,7 +50,7 @@ class Order: Consumable {
     
     private var items = Array<Order.Item>()
     
-    public var numberOfItems: Int {
+    var numberOfItems: Int {
         return items.count
     }
     
@@ -64,5 +70,9 @@ class Order: Consumable {
         self.items.append(Order.Item(WithUnits: hamburgers, andType: .Hamburger))
         self.items.append(Order.Item(WithUnits: fries, andType: .Fries))
         self.items.append(Order.Item(WithUnits: iceCream, andType: .IceCream))
+    }
+    
+    func item(atIndex index: Int) -> String {
+        return items[index].type.description
     }
 }
