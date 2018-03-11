@@ -10,6 +10,8 @@ import UIKit
 
 class OrderSummaryViewController: UIViewController {
 
+    @IBOutlet weak var summaryTableView: UITableView!
+    
     @IBOutlet weak var summaryLabel: UILabel! {
         didSet {
             guard order != nil else {

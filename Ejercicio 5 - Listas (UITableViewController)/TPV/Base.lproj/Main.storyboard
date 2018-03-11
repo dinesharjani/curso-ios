@@ -125,16 +125,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXo-dE-E8O">
+                                <rect key="frame" x="0.0" y="88" width="375" height="661"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="j5j-7e-8nR" firstAttribute="bottom" secondItem="1Qj-0A-FiG" secondAttribute="bottom" id="6oJ-nI-AHy"/>
+                            <constraint firstItem="bXo-dE-E8O" firstAttribute="top" secondItem="j5j-7e-8nR" secondAttribute="top" id="OBz-fA-Okv"/>
+                            <constraint firstItem="bXo-dE-E8O" firstAttribute="width" secondItem="3SZ-Bc-qRY" secondAttribute="width" id="dr2-g1-tNg"/>
                             <constraint firstItem="1Qj-0A-FiG" firstAttribute="centerX" secondItem="j5j-7e-8nR" secondAttribute="centerX" id="oMU-KZ-zgp"/>
+                            <constraint firstItem="bXo-dE-E8O" firstAttribute="centerX" secondItem="j5j-7e-8nR" secondAttribute="centerX" id="r2y-a1-Olm"/>
+                            <constraint firstItem="j5j-7e-8nR" firstAttribute="bottom" secondItem="bXo-dE-E8O" secondAttribute="bottom" constant="29" id="xmw-5c-8Yn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="j5j-7e-8nR"/>
                     </view>
                     <connections>
                         <outlet property="summaryLabel" destination="1Qj-0A-FiG" id="9vw-Eg-70Y"/>
+                        <outlet property="summaryTableView" destination="bXo-dE-E8O" id="7zM-V8-mnp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUS-3d-pSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
