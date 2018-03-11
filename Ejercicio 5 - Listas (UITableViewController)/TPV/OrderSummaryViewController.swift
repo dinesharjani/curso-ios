@@ -36,6 +36,8 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onViewControllerTapped(_:))))
         
         summaryTableView.dataSource = self
+        // Removes empty UITableViewCell(s).
+        summaryTableView.tableFooterView = UIView()
     }
     
     @objc func onViewControllerTapped(_ sender: Any?) {
