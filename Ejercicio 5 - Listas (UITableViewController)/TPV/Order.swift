@@ -72,7 +72,8 @@ class Order: Consumable {
         self.items.append(Order.Item(WithUnits: iceCream, andType: .IceCream))
     }
     
-    func item(atIndex index: Int) -> String {
-        return items[index].type.description
+    func item(atIndex index: Int) -> (units: Int, description: String, price: Price) {
+        let item = items[index]
+        return (item.units, item.type.description, item.price)
     }
 }

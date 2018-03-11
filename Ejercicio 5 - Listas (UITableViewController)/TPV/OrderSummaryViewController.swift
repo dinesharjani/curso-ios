@@ -58,7 +58,8 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: Constants.cellIdentifier)
         }
         
-        cell?.textLabel?.text = order!.item(atIndex: indexPath.row)
+        let orderItem = order!.item(atIndex: indexPath.row)
+        cell?.textLabel?.text = "\(orderItem.units) x \(orderItem.description) = \(orderItem.price.description)"
         
         return cell!
     }
