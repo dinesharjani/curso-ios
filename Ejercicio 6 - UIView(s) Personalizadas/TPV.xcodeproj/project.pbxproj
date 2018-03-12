@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA39AD732056A00600671D66 /* POSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39AD722056A00600671D66 /* POSButton.swift */; };
+		AA39AD752056A11E00671D66 /* POSButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39AD742056A11E00671D66 /* POSButton.xib */; };
 		AA56FB172053FA9700ADC06D /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56FB162053FA9700ADC06D /* OrderSummaryViewController.swift */; };
 		AA87ECCE204B06FE004FFBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87ECCD204B06FE004FFBC8 /* AppDelegate.swift */; };
 		AA87ECD0204B06FE004FFBC8 /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87ECCF204B06FE004FFBC8 /* POSViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA39AD722056A00600671D66 /* POSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSButton.swift; sourceTree = "<group>"; };
+		AA39AD742056A11E00671D66 /* POSButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POSButton.xib; sourceTree = "<group>"; };
 		AA56FB162053FA9700ADC06D /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
 		AA87ECCA204B06FE004FFBC8 /* TPV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87ECCD204B06FE004FFBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				AA56FB162053FA9700ADC06D /* OrderSummaryViewController.swift */,
 				AAB91042204DA46A0052794A /* Price.swift */,
 				AAB91040204D7DD60052794A /* Order.swift */,
+				AA39AD722056A00600671D66 /* POSButton.swift */,
+				AA39AD742056A11E00671D66 /* POSButton.xib */,
 				AA87ECD1204B06FE004FFBC8 /* Main.storyboard */,
 				AA87ECD4204B06FE004FFBC8 /* Assets.xcassets */,
 				AA87ECD6204B06FE004FFBC8 /* LaunchScreen.storyboard */,
@@ -132,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA39AD752056A11E00671D66 /* POSButton.xib in Resources */,
 				AA87ECD8204B06FE004FFBC8 /* LaunchScreen.storyboard in Resources */,
 				AA87ECD5204B06FE004FFBC8 /* Assets.xcassets in Resources */,
 				AA87ECD3204B06FE004FFBC8 /* Main.storyboard in Resources */,
@@ -145,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA39AD732056A00600671D66 /* POSButton.swift in Sources */,
 				AAB91041204D7DD60052794A /* Order.swift in Sources */,
 				AAB91043204DA46A0052794A /* Price.swift in Sources */,
 				AA56FB172053FA9700ADC06D /* OrderSummaryViewController.swift in Sources */,
