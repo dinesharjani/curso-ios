@@ -27,6 +27,8 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    @IBOutlet weak var emptyOrderLabel: UILabel!
+    
     public var order: Order?
     
     override func viewDidLoad() {
@@ -48,6 +50,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard order != nil else {
+            emptyOrderLabel.isHidden = false
             return 0
         }
         
