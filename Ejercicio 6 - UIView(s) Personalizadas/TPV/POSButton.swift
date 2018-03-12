@@ -10,6 +10,8 @@ import UIKit
 
 class POSButton: UIView {
 
+    @IBOutlet weak var counterLabel: UILabel!
     
-
+    @IBOutlet weak var mainLabel: UILabel!
+    
 }
