@@ -31,7 +31,7 @@ class POSButton: UIView {
         }
     }
     
-    var text: String = "" {
+    @IBInspectable var text: String = "" {
         didSet {
             mainLabel.text = text
         }
