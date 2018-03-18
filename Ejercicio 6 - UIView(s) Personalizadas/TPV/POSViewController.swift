@@ -23,25 +23,11 @@ class POSViewController: UIViewController {
         }
     }
     
-    @IBOutlet var orderLabels: [UILabel]!
+    private (set) var hamburguesas = 0
     
-    private (set) var hamburguesas = 0 {
-        didSet {
-            orderLabels[Constants.burgersLabelIndex].text = "Hamburguesas: \(hamburguesas)"
-        }
-    }
+    private (set) var papasFritas = 0
     
-    private (set) var papasFritas = 0 {
-        didSet {
-            orderLabels[Constants.friesLabelIndex].text = "Papas Fritas: \(papasFritas)"
-        }
-    }
-    
-    private (set) var helados = 0 {
-        didSet {
-            orderLabels[Constants.iceCreamLabelIndex].text = "Helados: \(helados)"
-        }
-    }
+    private (set) var helados = 0
     
     private var numberOfItemsInOrder: Int {
         get {
@@ -56,19 +42,7 @@ class POSViewController: UIViewController {
     
     private var orders = [Order]()
     
-    @IBAction private func buttonWasTapped(_ sender: UIButton) {
-        hamburguesas += 1
-    }
-    
-    @IBAction private func papasFritasWasTapped(_ sender: UIButton) {
-        papasFritas += 1
-    }
-    
-    @IBAction private func heladosWasTapped(_ sender: UIButton) {
-        helados += 1
-    }
-    
-    @IBAction private func newOrderWasTapped(_ sender: UIButton) {
+   @IBAction private func newOrderWasTapped(_ sender: UIButton) {
         if let newOrder = Order(hamburgers: hamburguesas, fries: papasFritas, iceCream: helados) {
             orders.append(newOrder)
             print("\(newOrder.price)")
