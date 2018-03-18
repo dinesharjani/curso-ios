@@ -56,15 +56,8 @@ class POSButton: UIView {
         
         addSubview(contentView)
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onButtonTapped(_:)))
-        addGestureRecognizer(tapGestureRecognizer)
-    }
     
-    @objc func onButtonTapped(_ sender: Any) {
+    @IBAction func onButtonTapped(_ sender: Any) {
         units += 1
     }
     
