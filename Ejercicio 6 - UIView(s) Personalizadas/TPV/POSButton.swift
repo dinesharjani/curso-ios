@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class POSButton: UIView {
 
     @IBOutlet private var contentView: UIView!
@@ -18,7 +19,11 @@ class POSButton: UIView {
         }
     }
     
-    @IBOutlet private weak var mainLabel: UILabel!
+    @IBOutlet private weak var mainLabel: UILabel! {
+        didSet {
+            text = "🍿"
+        }
+    }
     
     private (set) var units = 0 {
         didSet {
