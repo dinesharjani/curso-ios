@@ -22,21 +22,29 @@ class POSViewController: UIViewController {
             headerImageView.image = UIImage(named: "header")
         }
     }
+    @IBOutlet var posButtonCollection: [POSButton]!
     
-    private (set) var hamburguesas = 0
+    private var hamburguesas: Int {
+        get {
+            return posButtonCollection[Constants.burgersLabelIndex].units
+        }
+    }
     
-    private (set) var papasFritas = 0
+    private var papasFritas: Int {
+        get {
+            return posButtonCollection[Constants.friesLabelIndex].units
+        }
+    }
     
-    private (set) var helados = 0
+    private var helados: Int {
+        get {
+            return posButtonCollection[Constants.iceCreamLabelIndex].units
+        }
+    }
     
     private var numberOfItemsInOrder: Int {
         get {
             return hamburguesas + papasFritas + helados
-        }
-        set {
-            hamburguesas = 0
-            papasFritas = 0
-            helados = 0
         }
     }
     
@@ -47,8 +55,10 @@ class POSViewController: UIViewController {
             orders.append(newOrder)
             print("\(newOrder.price)")
         }
-        
-        numberOfItemsInOrder = 0
+    
+        for posButton in posButtonCollection {
+            posButton.resetUnits()
+        }
     }
     
     override func viewDidLoad() {

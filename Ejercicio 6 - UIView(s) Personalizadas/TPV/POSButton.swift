@@ -56,4 +56,8 @@ class POSButton: UIView {
     @objc func onButtonTapped(_ sender: Any) {
         units += 1
     }
+    
+    func resetUnits() {
+        units = 0
+    }
 }

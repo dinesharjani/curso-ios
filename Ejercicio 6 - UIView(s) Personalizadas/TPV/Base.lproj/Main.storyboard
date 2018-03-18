@@ -78,6 +78,9 @@
                     <navigationItem key="navigationItem" id="SDX-4d-f8d"/>
                     <connections>
                         <outlet property="headerImageView" destination="CSp-dg-fbz" id="CMR-mS-q1q"/>
+                        <outletCollection property="posButtonCollection" destination="BTf-ur-AzG" collectionClass="NSMutableArray" id="6wL-XC-NZO"/>
+                        <outletCollection property="posButtonCollection" destination="z3d-1T-OZG" collectionClass="NSMutableArray" id="0rI-JB-BTY"/>
+                        <outletCollection property="posButtonCollection" destination="0kp-GO-0GX" collectionClass="NSMutableArray" id="VrD-Gn-tNz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
