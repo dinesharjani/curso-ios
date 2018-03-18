@@ -25,12 +25,12 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gju-bR-KHp">
                     <rect key="frame" x="24.5" y="25" width="80" height="80"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Gju-bR-KHp" secondAttribute="height" multiplier="1:1" id="8FU-Mf-jdK"/>
                         <constraint firstAttribute="height" priority="750" constant="80" id="aMC-5S-Mow"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>

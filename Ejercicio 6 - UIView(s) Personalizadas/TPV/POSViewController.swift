@@ -14,6 +14,8 @@ class POSViewController: UIViewController {
         static let burgersLabelIndex = 0
         static let friesLabelIndex = 1
         static let iceCreamLabelIndex = 2
+        
+        static let labels = ["🍔", "🍟", "🍦"]
     }
     
     @IBOutlet weak var headerImageView: UIImageView! {
@@ -22,7 +24,14 @@ class POSViewController: UIViewController {
             headerImageView.image = UIImage(named: "header")
         }
     }
-    @IBOutlet var posButtonCollection: [POSButton]!
+    
+    @IBOutlet var posButtonCollection: [POSButton]! {
+        didSet {
+            for buttonIndex in posButtonCollection.indices {
+                posButtonCollection[buttonIndex].text = Constants.labels[buttonIndex]
+            }
+        }
+    }
     
     private var hamburguesas: Int {
         get {
