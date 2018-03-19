@@ -59,6 +59,14 @@ class POSButton: UIView {
     
     @IBAction func onButtonTapped(_ sender: Any) {
         units += 1
+        
+        UIView.animate(withDuration: 0.15, delay: 0, options: [.autoreverse], animations: {
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        }) { (completed) in
+            if completed {
+                self.transform = CGAffineTransform.identity
+            }
+        }
     }
     
     func resetUnits() {
