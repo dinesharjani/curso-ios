@@ -14,6 +14,8 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         static let cellIdentifier = "MyIdentifier"
     }
     
+    // MARK: Properties & Outlets
+    
     @IBOutlet weak var summaryTableView: UITableView!
     
     @IBOutlet weak var summaryLabel: UILabel! {
@@ -31,6 +33,8 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
     
     public var order: Order?
     
+    // MARK: UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,11 +50,27 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         navigationController?.popViewController(animated: true)
     }
     
+    // MARK: Private Functions
+    
+    private func willShowTableView(withItems hasItems: Bool) {
+        emptyOrderLabel.isHidden = hasItems
+        
+        if hasItems {
+            let startingFrame = summaryTableView.frame
+            
+            let originBelowScreen = CGPoint(x: 0, y: summaryTableView.frame.origin.y + view.bounds.size.height)
+            summaryTableView.frame = CGRect(origin: originBelowScreen, size: summaryTableView.bounds.size)
+            UIView.animate(withDuration: 0.8, animations: {
+                self.summaryTableView.frame = startingFrame
+            })
+        }
+    }
+    
     // MARK: UITableViewDataSourceDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        willShowTableView(withItems: order != nil)
         guard order != nil else {
-            emptyOrderLabel.isHidden = false
             return 0
         }
         
