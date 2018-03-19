@@ -46,30 +46,32 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         summaryTableView.tableFooterView = UIView()
     }
     
-    @objc func onViewControllerTapped(_ sender: Any?) {
-        navigationController?.popViewController(animated: true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        guard order != nil else {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.emptyOrderLabel.isHidden = false
+            })
+            return
+        }
+        
+        let startingFrame = summaryTableView.frame
+        let originBelowScreen = CGPoint(x: 0, y: summaryTableView.frame.origin.y + view.bounds.size.height)
+        summaryTableView.frame = CGRect(origin: originBelowScreen, size: summaryTableView.bounds.size)
+        summaryTableView.isHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.summaryTableView.frame = startingFrame
+        }
     }
     
-    // MARK: Private Functions
-    
-    private func willShowTableView(withItems hasItems: Bool) {
-        emptyOrderLabel.isHidden = hasItems
-        
-        if hasItems {
-            let startingFrame = summaryTableView.frame
-            
-            let originBelowScreen = CGPoint(x: 0, y: summaryTableView.frame.origin.y + view.bounds.size.height)
-            summaryTableView.frame = CGRect(origin: originBelowScreen, size: summaryTableView.bounds.size)
-            UIView.animate(withDuration: 0.8, animations: {
-                self.summaryTableView.frame = startingFrame
-            })
-        }
+    @objc func onViewControllerTapped(_ sender: Any?) {
+        navigationController?.popViewController(animated: true)
     }
     
     // MARK: UITableViewDataSourceDelegate
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        willShowTableView(withItems: order != nil)
         guard order != nil else {
             return 0
         }
