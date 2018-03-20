@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huW-Tq-Pn6">
-                                <rect key="frame" x="140" y="748" width="96" height="30"/>
+                                <rect key="frame" x="139.66666666666666" y="748" width="96" height="30"/>
                                 <state key="normal" title="Nuevo Pedido"/>
                                 <connections>
                                     <action selector="newOrderWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hj5-Yk-yF6"/>
@@ -34,7 +34,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-bI-lPN">
-                                <rect key="frame" x="15.666666666666657" y="162" width="343" height="300"/>
+                                <rect key="frame" x="16" y="162" width="343" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-ur-AzG" customClass="POSButton" customModule="TPV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
@@ -52,11 +52,14 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="HB0-lR-fnB"/>
+                                    <constraint firstAttribute="height" constant="300" id="HB0-lR-fnB">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="150"/>
+                                    </constraint>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" axis="horizontal"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niK-4H-vyz">
-                                <rect key="frame" x="133" y="710" width="108" height="30"/>
+                                <rect key="frame" x="133.66666666666666" y="710" width="108" height="30"/>
                                 <state key="normal" title="Resumir Pedido"/>
                                 <connections>
                                     <segue destination="OF0-8i-88g" kind="show" identifier="showSummary" id="hu4-Cg-lbY"/>
@@ -103,13 +106,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order is empty 🤷🏽‍♂️" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htp-GT-nid">
-                                <rect key="frame" x="98.666666666666686" y="422.66666666666669" width="177" height="21"/>
+                                <rect key="frame" x="99" y="422.66666666666669" width="177" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qj-0A-FiG">
-                                <rect key="frame" x="166" y="757" width="42" height="21"/>
+                                <rect key="frame" x="166.66666666666666" y="757" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
