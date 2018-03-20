@@ -60,9 +60,10 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
         let originBelowScreen = CGPoint(x: 0, y: summaryTableView.frame.origin.y + view.bounds.size.height)
         summaryTableView.frame = CGRect(origin: originBelowScreen, size: summaryTableView.bounds.size)
         summaryTableView.isHidden = false
-        UIView.animate(withDuration: 0.5) {
+        
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             self.summaryTableView.frame = startingFrame
-        }
+        }, completion: nil)
     }
     
     @objc func onViewControllerTapped(_ sender: Any?) {
