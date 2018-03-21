@@ -38,7 +38,7 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Resumen"
+        title = NSLocalizedString("vc.ordersummary.title", comment: "")
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onViewControllerTapped(_:))))
         
         summaryTableView.dataSource = self

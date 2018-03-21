@@ -73,7 +73,7 @@ class POSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "TPV"
+        title = NSLocalizedString("vc.pos.title", comment: "")
         view.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
     }
     

@@ -10,6 +10,7 @@
 		AA39AD732056A00600671D66 /* POSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39AD722056A00600671D66 /* POSButton.swift */; };
 		AA39AD752056A11E00671D66 /* POSButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39AD742056A11E00671D66 /* POSButton.xib */; };
 		AA56FB172053FA9700ADC06D /* OrderSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA56FB162053FA9700ADC06D /* OrderSummaryViewController.swift */; };
+		AA6999312062DA2E00485DE2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA6999332062DA2E00485DE2 /* Localizable.strings */; };
 		AA87ECCE204B06FE004FFBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87ECCD204B06FE004FFBC8 /* AppDelegate.swift */; };
 		AA87ECD0204B06FE004FFBC8 /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA87ECCF204B06FE004FFBC8 /* POSViewController.swift */; };
 		AA87ECD3204B06FE004FFBC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA87ECD1204B06FE004FFBC8 /* Main.storyboard */; };
@@ -23,6 +24,9 @@
 		AA39AD722056A00600671D66 /* POSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSButton.swift; sourceTree = "<group>"; };
 		AA39AD742056A11E00671D66 /* POSButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = POSButton.xib; sourceTree = "<group>"; };
 		AA56FB162053FA9700ADC06D /* OrderSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryViewController.swift; sourceTree = "<group>"; };
+		AA6999322062DA2E00485DE2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA6999342062DA3200485DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA6999352062DA3900485DE2 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA87ECCA204B06FE004FFBC8 /* TPV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TPV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA87ECCD204B06FE004FFBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA87ECCF204B06FE004FFBC8 /* POSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 				AA87ECD4204B06FE004FFBC8 /* Assets.xcassets */,
 				AA87ECD6204B06FE004FFBC8 /* LaunchScreen.storyboard */,
 				AA87ECD9204B06FE004FFBC8 /* Info.plist */,
+				AA6999332062DA2E00485DE2 /* Localizable.strings */,
 			);
 			path = TPV;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = AA87ECC1204B06FE004FFBC8;
 			productRefGroup = AA87ECCB204B06FE004FFBC8 /* Products */;
@@ -146,6 +152,7 @@
 				AA87ECD8204B06FE004FFBC8 /* LaunchScreen.storyboard in Resources */,
 				AA87ECD5204B06FE004FFBC8 /* Assets.xcassets in Resources */,
 				AA87ECD3204B06FE004FFBC8 /* Main.storyboard in Resources */,
+				AA6999312062DA2E00485DE2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +175,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AA6999332062DA2E00485DE2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA6999322062DA2E00485DE2 /* es */,
+				AA6999342062DA3200485DE2 /* Base */,
+				AA6999352062DA3900485DE2 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AA87ECD1204B06FE004FFBC8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
