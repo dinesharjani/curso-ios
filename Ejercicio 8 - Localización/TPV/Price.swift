@@ -19,7 +19,12 @@ struct Price: CustomStringConvertible {
     let cents: Int
     
     var description: String {
-        return "\(units).\(cents)€"
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+        let priceNumber = NSNumber(value: units + (cents / 100))
+        return formatter.string(from: priceNumber)!
     }
     
     init(units: Int = 0, cents: Int = 0, multiplier: Int = 1) {
