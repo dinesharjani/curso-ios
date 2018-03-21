@@ -34,6 +34,8 @@
 		AAB91042204DA46A0052794A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		AACDD7B72062CAAD00B19CDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		AACDD7B82062CAAD00B19CDC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		AACDD7B92062D71D00B19CDC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		AACDD7BA2062D71D00B19CDC /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 			children = (
 				AA87ECD2204B06FE004FFBC8 /* Base */,
 				AACDD7B72062CAAD00B19CDC /* es */,
+				AACDD7B92062D71D00B19CDC /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			children = (
 				AA87ECD7204B06FE004FFBC8 /* Base */,
 				AACDD7B82062CAAD00B19CDC /* es */,
+				AACDD7BA2062D71D00B19CDC /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
