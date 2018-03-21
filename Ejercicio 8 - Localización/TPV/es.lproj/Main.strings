@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1Qj-0A-FiG"; */
+"1Qj-0A-FiG.text" = "N/D";
+
+/* Class = "UILabel"; text = "Your order is empty 🤷🏽‍♂️"; ObjectID = "htp-GT-nid"; */
+"htp-GT-nid.text" = "Su pedido está vacío 🤷🏽‍♂️";
+
+/* Class = "UIButton"; normalTitle = "Nuevo Pedido"; ObjectID = "huW-Tq-Pn6"; */
+"huW-Tq-Pn6.normalTitle" = "Nuevo Pedido";
+
+/* Class = "UIButton"; normalTitle = "Resumir Pedido"; ObjectID = "niK-4H-vyz"; */
+"niK-4H-vyz.normalTitle" = "Resumir Pedido";
