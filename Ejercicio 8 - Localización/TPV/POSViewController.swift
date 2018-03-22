@@ -25,6 +25,14 @@ class POSViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var dateLabel: UILabel! {
+        didSet {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateStyle = .full
+            dateLabel.text = dateFormatter.string(from: Date())
+        }
+    }
+    
     @IBOutlet var posButtonCollection: [POSButton]! {
         didSet {
             for buttonIndex in posButtonCollection.indices {

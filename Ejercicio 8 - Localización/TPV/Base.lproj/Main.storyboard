@@ -34,17 +34,17 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gjV-bI-lPN">
-                                <rect key="frame" x="16" y="162" width="343" height="300"/>
+                                <rect key="frame" x="16" y="190.33333333333337" width="343" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTf-ur-AzG" customClass="POSButton" customModule="TPV" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                         <viewLayoutGuide key="safeArea" id="nqO-d4-uci"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3d-1T-OZG" customClass="POSButton" customModule="TPV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="343" height="100"/>
+                                        <rect key="frame" x="0.0" y="99.999999999999972" width="343" height="100"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kp-GO-0GX" customClass="POSButton" customModule="TPV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="200" width="343" height="100"/>
+                                        <rect key="frame" x="0.0" y="199.99999999999997" width="343" height="100.00000000000003"/>
                                         <viewLayoutGuide key="safeArea" id="tPh-Mn-nzI"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="text" value="🍕"/>
@@ -65,17 +65,25 @@
                                     <segue destination="OF0-8i-88g" kind="show" identifier="showSummary" id="hu4-Cg-lbY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5D-qa-x74">
+                                <rect key="frame" x="166.33333333333334" y="162" width="41.666666666666657" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="huW-Tq-Pn6" firstAttribute="top" secondItem="niK-4H-vyz" secondAttribute="bottom" constant="8" id="31I-8q-9C3"/>
+                            <constraint firstItem="gjV-bI-lPN" firstAttribute="top" secondItem="a5D-qa-x74" secondAttribute="bottom" constant="8" symbolic="YES" id="6ax-yW-hlV"/>
                             <constraint firstItem="niK-4H-vyz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HIv-xQ-EYA"/>
                             <constraint firstItem="gjV-bI-lPN" firstAttribute="width" secondItem="CSp-dg-fbz" secondAttribute="width" id="Jd1-8z-690"/>
                             <constraint firstItem="huW-Tq-Pn6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MPi-16-BRw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CSp-dg-fbz" secondAttribute="trailing" constant="16" id="WaR-Vy-VP6"/>
+                            <constraint firstItem="a5D-qa-x74" firstAttribute="top" secondItem="CSp-dg-fbz" secondAttribute="bottom" constant="8" id="ZIe-vk-pnc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="huW-Tq-Pn6" secondAttribute="bottom" id="eUy-fA-oBM"/>
                             <constraint firstItem="CSp-dg-fbz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hf5-sH-0vA"/>
-                            <constraint firstItem="gjV-bI-lPN" firstAttribute="top" secondItem="CSp-dg-fbz" secondAttribute="bottom" constant="8" symbolic="YES" id="oyu-tX-0SH"/>
+                            <constraint firstItem="a5D-qa-x74" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nRu-bq-g4c"/>
                             <constraint firstItem="CSp-dg-fbz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yG4-3I-wIo"/>
                             <constraint firstItem="gjV-bI-lPN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yOJ-1N-Dem"/>
                         </constraints>
@@ -83,6 +91,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SDX-4d-f8d"/>
                     <connections>
+                        <outlet property="dateLabel" destination="a5D-qa-x74" id="EKA-4G-dOP"/>
                         <outlet property="headerImageView" destination="CSp-dg-fbz" id="CMR-mS-q1q"/>
                         <outletCollection property="posButtonCollection" destination="BTf-ur-AzG" collectionClass="NSMutableArray" id="6wL-XC-NZO"/>
                         <outletCollection property="posButtonCollection" destination="z3d-1T-OZG" collectionClass="NSMutableArray" id="0rI-JB-BTY"/>
