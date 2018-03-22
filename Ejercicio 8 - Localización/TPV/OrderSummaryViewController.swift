@@ -20,12 +20,13 @@ class OrderSummaryViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var summaryLabel: UILabel! {
         didSet {
+            let orderAmountLabelFormat = NSLocalizedString("summary.total", comment: "")
             guard order != nil else {
-                summaryLabel.text = "Total: 0.0€"
+                summaryLabel.text = String(format: orderAmountLabelFormat)
                 return
             }
 
-            summaryLabel.text = "Total: \(order!.price)"
+            summaryLabel.text = String(format: orderAmountLabelFormat, order!.price.description)
         }
     }
     

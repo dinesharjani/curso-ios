@@ -8,3 +8,7 @@
 
 "vc.pos.title" = "POS";
 "vc.ordersummary.title" = "Summary";
+
+"food.hamburgers" = "🍔 Hamburgers";
+"food.fries" = "🍟 French Fries";
+"food.ice-cream" = "🍦 Ice-Cream";

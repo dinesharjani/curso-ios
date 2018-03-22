@@ -28,9 +28,9 @@ class Order: Consumable {
             
             var description: String {
                 switch self {
-                case .Hamburger: return "🍔 Hamburguesas"
-                case .Fries: return "🍟 Papas Fritas"
-                case .IceCream: return "🍦 Helados"
+                case .Hamburger: return NSLocalizedString("food.hamburgers", comment: "")
+                case .Fries: return NSLocalizedString("food.fries", comment: "")
+                case .IceCream: return NSLocalizedString("food.ice-cream", comment: "")
                 }
             }
         }

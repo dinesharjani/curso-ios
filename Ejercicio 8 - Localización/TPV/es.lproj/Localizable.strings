@@ -9,3 +9,7 @@
 
 "vc.pos.title" = "TPV";
 "vc.ordersummary.title" = "Resumen";
+
+"food.hamburgers" = "🍔 Hamburguesas";
+"food.fries" = "🍟 Patatas Fritas";
+"food.ice-cream" = "🍦 Helados";
