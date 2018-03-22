@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  TPV
+
+  Created by Dinesh Harjani on 22/03/2018.
+  Copyright © 2018 Dinesh Harjani. All rights reserved.
+*/
+
+"CFBundleName" = "Kasse";
+"CFBundleDisplayName" = "Kasse";
+"NSHumanReadableCopyright" = "Copyright © 2018 Dinesh Harjani.";
