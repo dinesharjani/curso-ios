@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TPV
+
+  Created by Dinesh Harjani on 21/03/2018.
+  Copyright © 2018 Dinesh Harjani. All rights reserved.
+*/
+
+
+"vc.pos.title" = "TPV";
+"vc.ordersummary.title" = "Resumen";
+
+"food.hamburgers" = "🍔 Hamburguesas";
+"food.fries" = "🍟 Patatas Fritas";
+"food.ice-cream" = "🍦 Helados";

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="POSButton" customModule="TPV">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="oXv-Kw-q5L"/>
+                <outlet property="counterLabel" destination="W9E-B2-tR5" id="3GL-Pl-age"/>
+                <outlet property="mainLabel" destination="Gju-bR-KHp" id="dwb-Ky-Cz5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="171"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gju-bR-KHp">
+                    <rect key="frame" x="107" y="45.5" width="80" height="80"/>
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Gju-bR-KHp" secondAttribute="height" multiplier="1:1" id="8FU-Mf-jdK"/>
+                        <constraint firstAttribute="height" priority="750" constant="80" id="aMC-5S-Mow"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9E-B2-tR5">
+                    <rect key="frame" x="165" y="37.5" width="30" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="W9E-B2-tR5" secondAttribute="height" multiplier="1:1" id="Phf-iD-6gG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-FG-48o">
+                    <rect key="frame" x="107.5" y="37.5" width="88" height="88"/>
+                    <connections>
+                        <action selector="onButtonTapped:" destination="-1" eventType="touchUpInside" id="f2K-m5-ffU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Gju-bR-KHp" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="4au-5h-4ux"/>
+                <constraint firstItem="W9E-B2-tR5" firstAttribute="height" secondItem="Gju-bR-KHp" secondAttribute="height" multiplier="0.375" id="6eb-Fy-lpu"/>
+                <constraint firstItem="GL7-FG-48o" firstAttribute="leading" secondItem="Gju-bR-KHp" secondAttribute="leading" id="9Nh-M0-cvS"/>
+                <constraint firstItem="W9E-B2-tR5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="PTa-Uq-PTL"/>
+                <constraint firstItem="GL7-FG-48o" firstAttribute="trailing" secondItem="W9E-B2-tR5" secondAttribute="trailing" id="Ure-xj-FAV"/>
+                <constraint firstItem="Gju-bR-KHp" firstAttribute="bottom" secondItem="GL7-FG-48o" secondAttribute="bottom" id="jn6-mi-Imw"/>
+                <constraint firstItem="GL7-FG-48o" firstAttribute="top" secondItem="W9E-B2-tR5" secondAttribute="top" id="n5l-5I-65n"/>
+                <constraint firstItem="W9E-B2-tR5" firstAttribute="trailing" secondItem="Gju-bR-KHp" secondAttribute="trailing" constant="8" id="w79-YD-GdS"/>
+                <constraint firstItem="Gju-bR-KHp" firstAttribute="top" secondItem="W9E-B2-tR5" secondAttribute="top" constant="8" id="xOJ-HO-jcf"/>
+                <constraint firstItem="Gju-bR-KHp" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="yKL-Lf-b0x"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-870" y="-936.5"/>
+        </view>
+    </objects>
+</document>
