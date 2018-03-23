@@ -34,6 +34,17 @@ class POSViewController: UIViewController {
         return collection
     }()
     
+    private lazy var posStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.axis = .vertical
+        for button in posButtonCollection {
+            stackView.addArrangedSubview(button)
+        }
+        return stackView
+    }()
+    
     private var hamburguesas: Int {
         get {
             return posButtonCollection[Constants.burgersLabelIndex].units
@@ -74,7 +85,7 @@ class POSViewController: UIViewController {
     
     private func installConstraints() {
         let views = [
-            headerImageView, dateLabel
+            headerImageView, dateLabel, posStackView,
         ] as [UIView]
         
         for subview in views {
@@ -91,6 +102,10 @@ class POSViewController: UIViewController {
             
             dateLabel.topAnchor.constraintEqualToSystemSpacingBelow(headerImageView.bottomAnchor, multiplier: 1.0),
             dateLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            posStackView.topAnchor.constraintEqualToSystemSpacingBelow(dateLabel.bottomAnchor, multiplier: 1.0),
+            posStackView.heightAnchor.constraint(equalToConstant: 330),
+            posStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ].flatMap({$0})
         
         NSLayoutConstraint.activate(constraints)
