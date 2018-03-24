@@ -45,6 +45,11 @@ class POSViewController: UIViewController {
         return stackView
     }()
     
+    private lazy var posStackViewHeightConstraint : NSLayoutConstraint = {
+        let heightValue = traitCollection.verticalSizeClass == .regular ? CGFloat(330) : CGFloat(110)
+        return posStackView.heightAnchor.constraint(equalToConstant: heightValue)
+    }()
+    
     private var hamburguesas: Int {
         get {
             return posButtonCollection[Constants.burgersLabelIndex].units
@@ -104,8 +109,8 @@ class POSViewController: UIViewController {
             dateLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             
             posStackView.topAnchor.constraintEqualToSystemSpacingBelow(dateLabel.bottomAnchor, multiplier: 1.0),
-            posStackView.heightAnchor.constraint(equalToConstant: 330),
             posStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            posStackViewHeightConstraint,
         ].flatMap({$0})
         
         NSLayoutConstraint.activate(constraints)
@@ -122,6 +127,18 @@ class POSViewController: UIViewController {
         
         for buttonIndex in posButtonCollection.indices {
             posButtonCollection[buttonIndex].text = Constants.labels[buttonIndex]
+        }
+    }
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        if traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .compact {
+            posStackView.axis = .horizontal
+            posStackViewHeightConstraint.constant = 110
+        } else {
+            posStackView.axis = .vertical
+            posStackViewHeightConstraint.constant = 330
         }
     }
     
