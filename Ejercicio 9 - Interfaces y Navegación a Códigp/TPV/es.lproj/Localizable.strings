@@ -6,8 +6,8 @@
   Copyright © 2018 Dinesh Harjani. All rights reserved.
 */
 
-
 "vc.pos.title" = "TPV";
+"vc.pos.new" = "Nuevo Pedido";
 "vc.ordersummary.title" = "Resumen";
 
 "food.hamburgers" = "🍔 Hamburguesas";

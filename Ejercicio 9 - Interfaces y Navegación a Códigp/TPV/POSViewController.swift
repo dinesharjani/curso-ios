@@ -89,8 +89,14 @@ class POSViewController: UIViewController {
     }
     
     private func installConstraints() {
+        let orderSummaryButton = UIButton(type: .system)
+        orderSummaryButton.setTitle(NSLocalizedString("vc.ordersummary.title", comment: ""), for: .normal)
+        
+        let newOrderButton = UIButton(type: .system)
+        newOrderButton.setTitle(NSLocalizedString("vc.pos.new", comment: ""), for: .normal)
+        
         let views = [
-            headerImageView, dateLabel, posStackView,
+            headerImageView, dateLabel, posStackView, orderSummaryButton, newOrderButton
         ] as [UIView]
         
         for subview in views {
@@ -111,6 +117,12 @@ class POSViewController: UIViewController {
             posStackView.topAnchor.constraintEqualToSystemSpacingBelow(dateLabel.bottomAnchor, multiplier: 1.0),
             posStackView.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             posStackViewHeightConstraint,
+            
+            newOrderButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            newOrderButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            orderSummaryButton.bottomAnchor.constraint(equalTo: newOrderButton.topAnchor, constant: -8.0),
+            orderSummaryButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
         ].flatMap({$0})
         
         NSLayoutConstraint.activate(constraints)

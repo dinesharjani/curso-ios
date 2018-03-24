@@ -7,6 +7,7 @@
 */
 
 "vc.pos.title" = "POS";
+"vc.pos.new" = "New Order";
 "vc.ordersummary.title" = "Summary";
 
 "food.hamburgers" = "🍔 Hamburgers";
