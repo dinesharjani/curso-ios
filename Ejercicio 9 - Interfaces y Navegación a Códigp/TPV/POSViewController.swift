@@ -91,9 +91,11 @@ class POSViewController: UIViewController {
     private func installConstraints() {
         let orderSummaryButton = UIButton(type: .system)
         orderSummaryButton.setTitle(NSLocalizedString("vc.ordersummary.title", comment: ""), for: .normal)
+        orderSummaryButton.addTarget(self, action: #selector(summaryWasTapped(_:)), for: .touchUpInside)
         
         let newOrderButton = UIButton(type: .system)
         newOrderButton.setTitle(NSLocalizedString("vc.pos.new", comment: ""), for: .normal)
+        newOrderButton.addTarget(self, action: #selector(newOrderWasTapped(_:)), for: .touchUpInside)
         
         let views = [
             headerImageView, dateLabel, posStackView, orderSummaryButton, newOrderButton
@@ -164,7 +166,7 @@ class POSViewController: UIViewController {
     
     // MARK: Private Functions
     
-    @IBAction private func newOrderWasTapped(_ sender: UIButton) {
+    @objc private func newOrderWasTapped(_ sender: UIButton) {
         if let newOrder = Order(hamburgers: hamburguesas, fries: papasFritas, iceCream: helados) {
             orders.append(newOrder)
             print("\(newOrder.price)")
@@ -173,6 +175,10 @@ class POSViewController: UIViewController {
         for posButton in posButtonCollection {
             posButton.resetUnits()
         }
+    }
+    
+    @objc private func summaryWasTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "showSummary", sender: self)
     }
 }
 
