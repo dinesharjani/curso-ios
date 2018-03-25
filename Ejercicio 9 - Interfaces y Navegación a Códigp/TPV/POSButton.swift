@@ -11,19 +11,22 @@ import UIKit
 @IBDesignable
 class POSButton: UIView {
 
-    @IBOutlet private var contentView: UIView!
+    private lazy var counterLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
+        label.textAlignment = .center
+        label.font = label.font.withSize(23)
+        label.text = "0"
+        return label
+    }()
     
-    @IBOutlet private weak var counterLabel: UILabel! {
-        didSet {
-            units = 0
-        }
-    }
-    
-    @IBOutlet private weak var mainLabel: UILabel! {
-        didSet {
-            text = "🍿"
-        }
-    }
+    private lazy var mainLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+        label.textAlignment = .center
+        label.font = label.font.withSize(55)
+        return label
+    }()
     
     private (set) var units = 0 {
         didSet {
@@ -52,16 +55,36 @@ class POSButton: UIView {
     }
     
     func setup() {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "POSButton", bundle: bundle)
-        nib.instantiate(withOwner: self, options: nil)
-        contentView.frame = bounds
-        contentView.autoresizingMask = [UIViewAutoresizing.flexibleWidth, .flexibleHeight]
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onButtonTapped(_:)))
+        addGestureRecognizer(tapGestureRecognizer)
         
-        addSubview(contentView)
+        let views = [mainLabel, counterLabel]
+        for view in views {
+            view.translatesAutoresizingMaskIntoConstraints = false
+            addSubview(view)
+        }
+        
+        let mainLabelWidthConstraint = mainLabel.widthAnchor.constraint(equalToConstant: 92)
+        mainLabelWidthConstraint.priority = .defaultHigh
+        
+        let constraints = [
+            mainLabelWidthConstraint,
+            mainLabel.heightAnchor.constraint(equalTo: mainLabel.widthAnchor, multiplier: 1.0),
+            mainLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            mainLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            mainLabel.topAnchor.constraintGreaterThanOrEqualToSystemSpacingBelow(topAnchor, multiplier: 1.0),
+            mainLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -8.0),
+            
+            counterLabel.heightAnchor.constraint(equalTo: counterLabel.widthAnchor, multiplier: 1.0),
+            counterLabel.widthAnchor.constraint(equalTo: mainLabel.heightAnchor, multiplier: 0.375),
+            counterLabel.topAnchor.constraint(equalTo: mainLabel.topAnchor, constant: -8.0),
+            counterLabel.trailingAnchor.constraint(equalTo: mainLabel.trailingAnchor, constant: 8.0)
+        ].flatMap({$0})
+        
+        NSLayoutConstraint.activate(constraints)
     }
     
-    @IBAction func onButtonTapped(_ sender: Any) {
+    @objc private func onButtonTapped(_ sender: Any) {
         units += 1
         
         UIView.animate(withDuration: 0.15, delay: 0, options: [.autoreverse], animations: {
